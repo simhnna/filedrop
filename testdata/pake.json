@@ -1,0 +1,67 @@
+{
+  "cases": [
+    {
+      "name": "typical",
+      "secret": "mango-tulip",
+      "hostFp": "sha-256 3A:9F:0C:11:22:33:44:55:66:77:88:99:AA:BB:CC:DD:EE:FF:00:11:22:33:44:55:66:77:88:99:AA:BB:CC:DD",
+      "peerFp": "sha-256 C4:01:02:03:04:05:06:07:08:09:0A:0B:0C:0D:0E:0F:10:11:12:13:14:15:16:17:18:19:1A:1B:1C:1D:1E:1F",
+      "hostSeed": "7f4533bc04d844a3874c6352b833744f4991a39c02554f195e6955769c0f0bef487fcfab67720496c7ed9e7a5f1c7f88c1265284278d829cbbe9e713fb55ae4a",
+      "peerSeed": "fd1a9dabfa6dd81fad979fa7f1319e7b58a69cd7026f234c8d268ae1078dbe89a2ac9393996004a2c24774ba069aa636fd67693a72f3fb534133688d0f1874c7",
+      "hostShare": "2tjf+uVikyxCdE+YBZWpmB2DebpmFmvMdVAsajmxbkA=",
+      "peerShare": "ZDnkm7MCr/X6usSZ7x65SVWnv/djTBGuURDRgiukgBg=",
+      "hostMac": "sWj+GoXxSD6ctnUAkufO2Kx/RU7rcXMssUzABzxfKPc=",
+      "peerMac": "c4nEWobEtTH3BeeTI6LxsnbpBG/4gqbS3L9VwbR58gA="
+    },
+    {
+      "name": "multiple fingerprints",
+      "secret": "acid-zoom",
+      "hostFp": "sha-256 3A:9F:0C:11:22:33:44:55:66:77:88:99:AA:BB:CC:DD:EE:FF:00:11:22:33:44:55:66:77:88:99:AA:BB:CC:DD,sha-512 AB:CD:EF:01:23:45:67:89:AB:CD:EF:01:23:45:67:89:AB:CD:EF:01:23:45:67:89:AB:CD:EF:01:23:45:67:89:AB:CD:EF:01:23:45:67:89:AB:CD:EF:01:23:45:67:89:AB:CD:EF:01:23:45:67:89:AB:CD:EF:01:23:45:67:89",
+      "peerFp": "sha-256 C4:01:02:03:04:05:06:07:08:09:0A:0B:0C:0D:0E:0F:10:11:12:13:14:15:16:17:18:19:1A:1B:1C:1D:1E:1F",
+      "hostSeed": "53a69169fdedbc13f72897750fb2cf2ad241e61ec52af8c68e970d43ca142444b6a61e1f1bc85550daa3cd108ad7ed758f13e306acfa3b2a68683559f2087ae6",
+      "peerSeed": "2e4e1320fb6f7b30a8dd7463594c265e76af4792fe93cdd1755b8705b738582bd87dc8b1e3b97ca9b4e4a6e803e9a00b5ae935d85b767955244f0c93ff9d68cd",
+      "hostShare": "iOmDX6r82XmquVWUYerG0vpTaUP2eMB5ON5nApSnMQc=",
+      "peerShare": "wCv/1Z+DvmHIBzthsp2fJ7lYkEaCzPJ8dbkqrEziIHg=",
+      "hostMac": "M1M7lBqLQipJqW/rvnihF18lDCMVsihhRoXKbsIy4jM=",
+      "peerMac": "+R0eKdg2IAevnb5GMrqROdApWRJxcc0g4YxhfPw8MDM="
+    },
+    {
+      "name": "empty secret and fingerprints",
+      "secret": "",
+      "hostFp": "",
+      "peerFp": "",
+      "hostSeed": "3b0f6d8973c375f1875f9aaad97e0a1543994d72e451aafe56787bb5d7d94c0890b8ae50d74051f92e8091d94c33d61705f76e22f539399357779836b595fdf0",
+      "peerSeed": "ddd6fe511e86bfd121fc5686c40e7e5c62c0556f3d1189a8514b144fc56a2936e52ccf52094bb0d2c2ef4e01daa5a24d7070aa5351f19927851d8f1bfcc077ce",
+      "hostShare": "ZpfXH/9x4o0osJs1XQaNZX+RT6QXHlCmCVwvUi5oN3s=",
+      "peerShare": "tNEB/3cbJV0AY4Y/TRVEXPbIxm9/nChpAQHTN7LLnRc=",
+      "hostMac": "slzUeqDTLl0KlTxk6/YiLgGS2kQN2T22OQnp5nghmh4=",
+      "peerMac": "o5l0uUNrCqeErUhaV9iwFIpjk5gfN1fLb1bj6thOCwA="
+    }
+  ],
+  "fingerprints": [
+    {
+      "name": "single line, CRLF",
+      "sdp": "v=0\r\no=- 1 2 IN IP4 127.0.0.1\r\na=fingerprint:sha-256 3a:9f:0c:11:22:33:44:55:66:77:88:99:aa:bb:cc:dd:ee:ff:00:11:22:33:44:55:66:77:88:99:aa:bb:cc:dd\r\na=setup:actpass\r\n",
+      "want": "sha-256 3A:9F:0C:11:22:33:44:55:66:77:88:99:AA:BB:CC:DD:EE:FF:00:11:22:33:44:55:66:77:88:99:AA:BB:CC:DD"
+    },
+    {
+      "name": "duplicate per media section, mixed case",
+      "sdp": "v=0\na=fingerprint:SHA-256 c4:01:02:03:04:05:06:07:08:09:0A:0B:0C:0D:0E:0F:10:11:12:13:14:15:16:17:18:19:1A:1B:1C:1D:1E:1F\nm=application 9 UDP/DTLS/SCTP webrtc-datachannel\na=fingerprint:sha-256 C4:01:02:03:04:05:06:07:08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f  \n",
+      "want": "sha-256 C4:01:02:03:04:05:06:07:08:09:0A:0B:0C:0D:0E:0F:10:11:12:13:14:15:16:17:18:19:1A:1B:1C:1D:1E:1F"
+    },
+    {
+      "name": "multiple algorithms sorted",
+      "sdp": "a=fingerprint:sha-512 ab:cd\r\na=fingerprint:sha-256 ff:00\r\na=fingerprint:sha-1 12:34\r\n",
+      "want": "sha-1 12:34,sha-256 FF:00,sha-512 AB:CD"
+    },
+    {
+      "name": "ignores indented and malformed lines",
+      "sdp": " a=fingerprint:sha-256 AA:BB\r\na=fingerprint:sha-256\r\nx a=fingerprint:sha-256 CC:DD\r\n",
+      "want": ""
+    },
+    {
+      "name": "no fingerprints",
+      "sdp": "v=0\r\n",
+      "want": ""
+    }
+  ]
+}

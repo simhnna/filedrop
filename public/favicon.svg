@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+  <style>
+    .fg { fill: #111110 }
+    .arrow { stroke: #d4f43c }
+    @media (prefers-color-scheme: dark) {
+      .fg { fill: #f4f3ee }
+      .arrow { stroke: #111110 }
+    }
+  </style>
+  <rect x="7" y="7" width="23" height="23" rx="6" fill="#d4f43c" />
+  <rect class="fg" x="2" y="2" width="23" height="23" rx="6" />
+  <path class="arrow" d="M13.5 7v9M9 12.5l4.5 4.5 4.5-4.5M8.5 20.5h10" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" />
+</svg>

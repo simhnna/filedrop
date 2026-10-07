@@ -1,0 +1,175 @@
+{
+  "roomCodes": [
+    {
+      "input": "acid-acorn-acre-acts",
+      "roomId": "acid-acorn-acre-acts"
+    },
+    {
+      "input": "  Acid ACORN\tacre\nacts ",
+      "roomId": "acid-acorn-acre-acts"
+    },
+    {
+      "input": "acid--acorn - acre-acts",
+      "roomId": "acid-acorn-acre-acts"
+    },
+    {
+      "input": "https://filedrop.example/r/#acid-acorn-acre-acts",
+      "roomId": "acid-acorn-acre-acts"
+    },
+    {
+      "input": "https://filedrop.example/r/#x#Acid-Acorn-Acre-Acts",
+      "roomId": "acid-acorn-acre-acts"
+    },
+    {
+      "input": "acid-acorn-acre",
+      "roomId": null
+    },
+    {
+      "input": "acid-acorn-acre-acts-aged",
+      "roomId": null
+    },
+    {
+      "input": "acid-acorn-acre-notaword",
+      "roomId": null
+    },
+    {
+      "input": "",
+      "roomId": null
+    },
+    {
+      "input": "https://filedrop.example/r/#",
+      "roomId": null
+    }
+  ],
+  "splitRoom": [
+    {
+      "roomId": "acid-acorn-acre-acts",
+      "topic": "acid-acorn",
+      "secret": "acre-acts"
+    },
+    {
+      "roomId": "acid-acorn",
+      "topic": "acid-acorn",
+      "secret": ""
+    }
+  ],
+  "fileKeys": [
+    {
+      "name": "photo.jpg",
+      "size": 1234,
+      "lastModified": 1700000000000,
+      "key": "24314208020bd6d9ead8c36947251f87"
+    },
+    {
+      "name": "empty",
+      "size": 0,
+      "lastModified": 0,
+      "key": "5510799464a4878a5cf4d86c946e205f"
+    },
+    {
+      "name": "Ünïcödé 文件.txt",
+      "size": 65537,
+      "lastModified": 1759860000123,
+      "key": "2fae7f99117e6514ff7fc8b43b54d959"
+    }
+  ],
+  "have": [
+    {
+      "name": "empty bitmap",
+      "totalChunks": 10,
+      "bitmap": "AAA=",
+      "ranges": [],
+      "missing": [
+        [
+          0,
+          9
+        ]
+      ]
+    },
+    {
+      "name": "all received",
+      "totalChunks": 10,
+      "bitmap": "/wM=",
+      "ranges": [
+        [
+          0,
+          9
+        ]
+      ],
+      "missing": []
+    },
+    {
+      "name": "fragmented",
+      "totalChunks": 20,
+      "bitmap": "JwYI",
+      "ranges": [
+        [
+          0,
+          2
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          19,
+          19
+        ]
+      ],
+      "missing": [
+        [
+          3,
+          4
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          11,
+          18
+        ]
+      ]
+    },
+    {
+      "name": "padding bits beyond totalChunks are ignored",
+      "totalChunks": 3,
+      "bitmap": "/w==",
+      "ranges": [
+        [
+          0,
+          2
+        ]
+      ],
+      "missing": []
+    },
+    {
+      "name": "short bitmap is zero-extended",
+      "totalChunks": 20,
+      "bitmap": "Dw==",
+      "ranges": [
+        [
+          0,
+          3
+        ]
+      ],
+      "missing": [
+        [
+          4,
+          19
+        ]
+      ]
+    },
+    {
+      "name": "no chunks",
+      "totalChunks": 0,
+      "bitmap": "",
+      "ranges": [],
+      "missing": []
+    }
+  ]
+}
