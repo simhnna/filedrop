@@ -44,6 +44,12 @@ jobs:
           fi
       - name: go mod tidy
         run: go mod tidy -diff
+      - name: licenses.txt up to date
+        run: |
+          go generate ./internal/licenses
+          if ! git diff --quiet internal/licenses/licenses.txt; then
+            echo "Dependencies changed: run 'go generate ./internal/licenses' in cli/ and commit"; exit 1
+          fi
       - run: go vet ./...
       - run: go test ./...
       - name: Cross-compile
