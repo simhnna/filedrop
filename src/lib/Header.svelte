@@ -25,9 +25,9 @@
     <span class="word">FileDrop</span>
   </a>
   <nav>
-    <a href="/about" onclick={go('/about')} aria-current={current === '/about' ? 'page' : undefined}>How it works</a>
+    <a href="/about" onclick={go('/about')} aria-current={current === '/about' ? 'page' : undefined}>FAQ</a>
     <a href="/cli" onclick={go('/cli')} aria-current={current === '/cli' ? 'page' : undefined}>
-      <span class="long">Command line</span><span class="short">CLI</span>
+      CLI
     </a>
     <a href={REPO_URL} target="_blank" rel="noopener" class="gh" aria-label="Source code on GitHub" title="Source code on GitHub">
       <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
@@ -44,8 +44,6 @@
   .gh svg { width: 20px; height: 20px; }
   .gh:hover { opacity: 0.7; }
   nav a { color: var(--ink); font-weight: 500; font-size: 15px; text-decoration: none; white-space: nowrap; }
-  .short { display: none; }
   nav a:hover, nav a[aria-current] { text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 2px; }
   @media (max-width: 600px) { nav { gap: 16px; } nav a { font-size: 14px; } }
-  @media (max-width: 400px) { .long { display: none; } .short { display: inline; } }
 </style>
